@@ -66,12 +66,8 @@ pip install pyautogui pyperclip requests instaloader telethon
 3. **Open TikTok in your browser**  
    Make sure the TikTok video feed is visible and that your browser is in the same position each time.
 
-4. **Run the main script**  
-   In your terminal:
-   ```bash
-   python lib/main.py
-   ```
-
+4. **Run the main.py script**  
+ 
 5. **What happens next**
    - The script moves your cursor to the video
    - Copies the link
