@@ -53,8 +53,8 @@ pip install pyautogui pyperclip requests instaloader telethon
 1. **Set your screen coordinates**  
    Open `SetUp.py` and edit the coordinate variables to match your screen setup:
    ```python
-   link_box_coords = (x1, y1)  # Coordinates where the link is located
-   button_coords = (x2, y2)    # Coordinates for clicking to scroll to the next video
+   url_cords = (x1, y1)  # Coordinates where the link is located
+   button_cords = (x2, y2)    # Coordinates for clicking to scroll to the next video
    ```
 
 2. **Install the required packages**  
