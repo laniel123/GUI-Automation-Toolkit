@@ -10,7 +10,7 @@ This project is ideal for collecting video links in environments where browser a
 
 - Real cursor movement using `pyautogui`  
 - Link grabbing via `pyperclip`  
-- Auto-scrolls to the next video  
+- Auto scrolls to the next video  
 - Centralized screen coordinates managed in `SetUp.py`  
 - Optional Instagram link downloading with `instaloader`  
 - Telegram integration using `telethon`  
@@ -64,7 +64,7 @@ pip install pyautogui pyperclip requests instaloader telethon
    ```
 
 3. **Open TikTok in your browser**  
-   Make sure the TikTok video feed is visible and your browser is in the same position each time.
+   Make sure the TikTok video feed is visible and that your browser is in the same position each time.
 
 4. **Run the main script**  
    In your terminal:
@@ -84,7 +84,7 @@ pip install pyautogui pyperclip requests instaloader telethon
 
 ###  Important
 
-- **This script takes over your mouse** — avoid using your computer while it runs.
+- **This script takes over your mouse**. Avoid using your computer while it runs.
 - Intended for **educational and personal use** only.
 - Please **respect platform terms of service**.
 
