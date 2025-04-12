@@ -72,7 +72,7 @@ pip install pyautogui pyperclip requests instaloader telethon
 5. **What happens next**
    - The script moves your cursor to the video
    - Copies the link
-   - Saves it to a file
+   - Saves it to the vids file
    - Scrolls to the next video and repeats
 
 >  Do not touch your mouse or keyboard while the script is running. It manually controls your system and may interfere with your input.
