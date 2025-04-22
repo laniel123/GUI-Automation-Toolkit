@@ -78,6 +78,11 @@ pip install pyautogui pyperclip requests instaloader telethon
 
 ---
 
+###  Demo
+
+[![Watch the demo](https://img.youtube.com/vi/KPzgZS0lX2U/0.jpg)](https://youtu.be/KPzgZS0lX2U)
+---
+
 ###  Important
 
 - **This script takes over your mouse**. Avoid using your computer while it runs.
