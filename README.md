@@ -12,7 +12,6 @@ This project is ideal for collecting video links in environments where browser a
 - Link grabbing via `pyperclip`  
 - Auto scrolls to the next video  
 - Centralized screen coordinates managed in `SetUp.py`  
-- Optional Instagram link downloading with `instaloader`  
 - Telegram integration using `telethon`  
 
 ---
