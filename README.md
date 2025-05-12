@@ -1,6 +1,6 @@
-## TikTok Video Downloader
+## GUI Automation Toolkit
 
-**TikTok Video Downloader** is a Python-based automation tool that uses GUI scripting to simulate user interaction on TikTok’s website. By leveraging `pyautogui` and `pyperclip`, it mimics real-time mouse movements and clipboard access to collect video links — useful in environments where traditional browser automation tools may be limited.
+**GUI Automation Toolkit** is a Python-based automation tool that uses GUI scripting to simulate user interaction on TikTok’s website. By leveraging `pyautogui` and `pyperclip`, it mimics real-time mouse movements and clipboard access to collect video links — useful in environments where traditional browser automation tools may be limited.
 
 > ⚠️ This project is intended for **educational and personal use only**. Please ensure your usage complies with TikTok’s Terms of Service.
 
