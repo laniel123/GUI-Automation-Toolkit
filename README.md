@@ -29,7 +29,7 @@ pip install pyautogui pyperclip requests instaloader telethon
 
 ---
 
-### Project Structure
+## Project Structure
 
 ```
 - `lib/main.py` – Main automation loop that coordinates link collection and video handling  
