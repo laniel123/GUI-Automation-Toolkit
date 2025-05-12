@@ -32,17 +32,16 @@ pip install pyautogui pyperclip requests instaloader telethon
 ### Project Structure
 
 ```
-├── lib/
-│   ├── main.py             # Main automation loop
-│   ├── linkgrabber.py      # Grabs and handles links
-│   ├── lnkgbrfucntions.py  # Low-level cursor and copy helpers
-│   ├── getInfo.py          # Organizes TikTok and Instagram links
-│   ├── getTTDict.py        # Parses TikTok cookies/token info
-│   ├── sendT.py            # Sends collected links to Telegram
-│   ├── download.py         # Downloads video content
-│   ├── launcher.py         # Entry point launcher
-│   ├── SetUp.py            # Contains coordinate values and setup logic
-├── vids/                   # Directory for saved video files
+- `lib/main.py` – Main automation loop that coordinates link collection and video handling  
+- `lib/linkgrabber.py` – Extracts video links from the interface using clipboard logic  
+- `lib/lnkgbrfunctions.py` – Low-level helpers for cursor movement and copy automation  
+- `lib/getInfo.py` – Formats and organizes TikTok/Instagram links into usable structures  
+- `lib/getTTDict.py` – Parses TikTok cookie and token information for deeper scraping  
+- `lib/sendT.py` – Sends collected links to a Telegram bot via API  
+- `lib/download.py` – Downloads video content from extracted links  
+- `lib/launcher.py` – Script launcher that initializes the workflow  
+- `lib/SetUp.py` – Defines screen coordinates and setup logic for PyAutoGUI  
+- `vids/` – Directory that stores downloaded or copied video files
 ```
 
 ---
