@@ -1,8 +1,8 @@
 ## TikTok Video Downloader
 
-**TikTok Video Downloader** is a Python automation project that controls your computer’s mouse in real time to mimic human interaction on TikTok’s website. It bypasses bot detection systems that block tools like Selenium by using manual `pyautogui` movements and clipboard access.
+**TikTok Video Downloader** is a Python-based automation tool that uses GUI scripting to simulate user interaction on TikTok’s website. By leveraging `pyautogui` and `pyperclip`, it mimics real-time mouse movements and clipboard access to collect video links — useful in environments where traditional browser automation tools may be limited.
 
-This project is ideal for collecting video links in environments where browser automation is restricted or flagged.
+> ⚠️ This project is intended for **educational and personal use only**. Please ensure your usage complies with TikTok’s Terms of Service.
 
 ---
 
