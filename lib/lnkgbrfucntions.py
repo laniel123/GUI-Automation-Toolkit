@@ -1,5 +1,6 @@
 import pyautogui
 import platform
+import os
 from download import TDLALL
 from download import IDLALL
 from sendT import sendTelmain
@@ -23,9 +24,12 @@ def click():
     pyautogui.click()
 
 def highlight_link():
-    click()
-    click()
-    click()
+    if os.name == 'nt':
+        click()
+        click()
+        click()
+    else:
+        click()
 
 def copy():
     pyautogui.hotkey(click_key, 'c')
