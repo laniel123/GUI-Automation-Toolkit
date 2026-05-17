@@ -59,29 +59,50 @@ def start_download():
     except Exception as e:
         messagebox.showerror("Error", f"An unexpected error occurred: {e}")
 
-def launch_1(total_num_execute):
-    print("Please navigate to the TikTok page within 10 seconds...")
-    time.sleep(10)  # Allows time for the user to navigate to the TikTok page
+def launch_1(total: int):
+    try:
+        ux = int(url_x_entry.get().strip())
+        uy = int(url_y_entry.get().strip())
+        bx = int(btn_x_entry.get().strip())
+        by = int(btn_y_entry.get().strip())
+    except ValueError:
+        log("Enter valid coordinates before collecting.", ERROR_COL)
+        return
 
-    with open("./data.txt", "w") as links_list:
-        for x in range(total_num_execute):
-            
-            # Move to the URL bar and highlight the link
-            pyautogui.moveTo(url_cords)
-            highlight_link()
-            copy()
-            time.sleep(0.1)  # Small delay to ensure the link is copied
+    set_coords(ux, uy, bx, by)
+    _save_config()
+    log(f"URL bar ({ux},{uy})  Next btn ({bx},{by})", TEXT3)
 
-            # Store the copied link in the file
-            pasteL = pyperclip.paste()
-            links_list.write(pasteL + "\n\n")
-            time.sleep(0.05)  # Small delay before moving to the next video
+    time.sleep(10)
 
-            # Move to the center of the video and click to scroll to the next video
-            pyautogui.moveTo(button_cords)
-            click()
+    # Force browser focus before starting
+    pyautogui.click(ux, uy)
+    time.sleep(0.3)
+    pyautogui.press("escape")
+    time.sleep(0.2)
 
-    print("Link collection complete.")
+    with open(_data_path(), "w") as f:
+        for i in range(total):
+            url = ""
+            for attempt in range(3):
+                url = get_current_url()
+                if url.startswith("https://www.tiktok.com") or url.startswith("https://m.tiktok.com"):
+                    break
+                log(f"  [{i+1}/{total}] Bad URL, retrying… ({url[:40]})", WARNING)
+                time.sleep(0.3)
+
+            if not url.startswith("https://www.tiktok.com") and not url.startswith("https://m.tiktok.com"):
+                log(f"  [{i+1}/{total}] Skipped — could not get valid URL", ERROR_COL)
+                click_next_video()
+                time.sleep(0.2)
+                continue
+
+            log(f"  [{i+1}/{total}] {url}")
+            f.write(url + "\n\n")
+            time.sleep(0.05)
+            click_next_video()
+            time.sleep(0.2)
+    log("Link collection complete.")
 
 # Run the program only if this script is executed directly
 if __name__ == '__main__':
