@@ -1,0 +1,8 @@
+dist/
+build/
+*.spec
+icon.iconset/
+__pycache__/
+*.pyc
+.DS_Store
+vids/
